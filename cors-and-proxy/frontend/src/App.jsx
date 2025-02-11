@@ -41,6 +41,12 @@ function App() {
         <div className='todos'>
           <Todolist todos={todos} setTodos={setTodos} store={singletonInstance} />
         </div>
+        <div>
+          <button onClick={()=>{
+            singletonInstance.clearTodos();
+            setTodos([]);
+          }}>Clear Todos</button>
+        </div>
         <div className='todos'>
           <Todolist todos={todos} setTodos={setTodos} store={singletonInstance} />
         </div>

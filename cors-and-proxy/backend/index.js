@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-
+import EventEmitter from 'events';
 const app = express();
 
 // middleware
@@ -33,10 +33,32 @@ app.get('/api/jokes',(req,res)=>{
     res.send(jokes);
 })
 
+    // Event emmiter in node js
+    const myEmmiter = new EventEmitter();
+
+    myEmmiter.on('hello',(name)=>{
+        console.log(`Hello ${name}, How are you`);
+    })
+
+    myEmmiter.emit('hello','Abu Bakkar');
+
+    const greetListener= (name)=>{
+        console.log(`Hey, What's up ${name}`);
+    }
+
+    myEmmiter.on('greet',greetListener);
+    myEmmiter.emit('greet','Shuhana');
+
+    myEmmiter.off('greet',greetListener);
+    myEmmiter.emit('greet','Rahi'); // No output because the emiter is removed
+
 
 app.get('/',(req,res)=>{
     res.send('Server is okay....')
+
 })
+
+
 
 
 const port = process.env.PORT || 5000;

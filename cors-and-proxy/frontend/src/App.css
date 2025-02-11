@@ -46,5 +46,9 @@
   padding-top: 220px;
   display: flex;
   justify-content: space-between;
+  align-items: end;
+  background-color: #282a2baa;
+  padding:40px;
+  border-radius: 28px;
 
 }

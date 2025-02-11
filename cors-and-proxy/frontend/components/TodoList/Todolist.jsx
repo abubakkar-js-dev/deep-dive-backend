@@ -10,20 +10,28 @@ const Todolist = ({ todos = [], setTodos, store = {} }) => {
     console.log(newtodo);
     store.addTodo(newtodo);
     setTodos([...store.getTodos()]);
-  }; 
+  };
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column',textAlign: 'center'}}>
+    <div
+      style={{ display: "flex", flexDirection: "column", textAlign: "center", border: '1px solid Highlight',padding: '14px',borderRadius: '24px' }}
+    >
       <ul className="todo-list">
-      {todos.map((todo, index) => (
-        <li key={index}>
-          <span className="todo">{todo.text}</span>
-          <span  onClick={()=>{
-          todo.deleteSelf(todo.id)
-          setTodos([...store.getTodos()])
-        }}  style={{marginLeft: '12px'}} className="todo todo-delete">X</span>
-        </li>
-      ))}
+        {todos.map((todo, index) => (
+          <li key={index}>
+            <span className="todo">{todo.text}</span>
+            <span
+              onClick={() => {
+                todo.deleteSelf(todo.id);
+                setTodos([...store.getTodos()]);
+              }}
+              style={{ marginLeft: "12px" }}
+              className="todo todo-delete"
+            >
+              X
+            </span>
+          </li>
+        ))}
       </ul>
 
       <button
