@@ -19,42 +19,62 @@
 let todos = [];
 let instance = null;
 
-// class Todos {
-//   constructor() {
-//     if (instance !== null) {
-//       throw new Error("You can only create one instance!");
-//     }
-//     instance = this;
-//   }
+class Todos {
+  constructor() {
+    if (instance !== null) {
+      throw new Error("You can only create one instance!");
+    }
+    instance = this;
+  }
 
-//   getTodos() {
-//     return todos;
-//   }
+  getTodos() {
+    return todos;
+  }
 
-//   addTodo(todo) {
-//     todos.push(todo);
-//   }
+  addTodo(todo) {
+    todos.push(createTodo(todo));
+  }
 
-//   clearTodos() {
-//     todos = [];
-//   }
-// }
-
-const Todos2 = {
-    getTodos() {
-        return todos;
-      },
-    
-      addTodo(todo) {
-        todos.push(todo);
-      },
-    
-      clearTodos() {
-        todos = [];
-      },
+  clearTodos() {
+    todos = [];
+  }
 }
 
-const singletonInstance = Todos2;
+// const Todos2 = {
+//     getTodos() {
+//         return todos;
+//       },
+    
+//       addTodo(todo) {
+//         todos.push(todo);
+//       },
+    
+//       clearTodos() {
+//         todos = [];
+//       },
+// }
+
+// factory pattern
+
+let currentTodoId=1;
+
+function createTodo(todoText){
+    return {
+        text: todoText,
+        id: currentTodoId++,
+        deleteSelf(id){
+          console.log(currentTodoId)
+          console.log(id,'From id');
+            const index = todos.findIndex(item=> item.id === id)
+            todos.splice(index,1);
+        }
+        
+    }
+}
+
+
+// const singletonInstance = Todos2;
+const singletonInstance = new Todos();
 Object.freeze(singletonInstance);
 
 export default singletonInstance;

@@ -7,7 +7,6 @@ import singletonInstance from './utils/todos';
 function App() {
   const [jokes,setJokes] = useState([]);
   const [todos,setTodos] = useState(singletonInstance.getTodos());
-  console.log(todos);
   // cannot add because object is freez
   // singletonInstance.something="23"
 

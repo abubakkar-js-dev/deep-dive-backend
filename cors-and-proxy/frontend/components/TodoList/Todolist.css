@@ -14,3 +14,12 @@
     background-color: rgb(68, 62, 62);
     border-radius: 4px;
 }
+
+.todo-delete:hover{
+    background-color: rgb(110, 68, 68);
+    transition: 1000ms;
+}
+
+.todo:hover{
+    cursor: pointer;
+}

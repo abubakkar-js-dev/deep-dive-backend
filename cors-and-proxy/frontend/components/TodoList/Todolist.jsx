@@ -8,19 +8,23 @@ const Todolist = ({ todos = [], setTodos, store = {} }) => {
   const hanleAddTodo = () => {
     const newtodo = `New todo ${Math.floor(Math.random() * 200)}`;
     console.log(newtodo);
-    setTodos([...todos, newtodo]);
     store.addTodo(newtodo);
-  };
+    setTodos([...store.getTodos()]);
+  }; 
+
   return (
     <div style={{display: 'flex', flexDirection: 'column',textAlign: 'center'}}>
       <ul className="todo-list">
       {todos.map((todo, index) => (
-        <li key={index} className="todo">
-          {todo}{" "}
+        <li key={index}>
+          <span className="todo">{todo.text}</span>
+          <span  onClick={()=>{
+          todo.deleteSelf(todo.id)
+          setTodos([...store.getTodos()])
+        }}  style={{marginLeft: '12px'}} className="todo todo-delete">X</span>
         </li>
       ))}
       </ul>
-
 
       <button
         onClick={hanleAddTodo}
