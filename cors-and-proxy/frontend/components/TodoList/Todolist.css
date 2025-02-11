@@ -1,0 +1,16 @@
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.add-todo:hover{
+    background-color: black !important;
+    color: white;
+
+}
+.todo{
+    padding: 4px 8px;
+    background-color: rgb(68, 62, 62);
+    border-radius: 4px;
+}

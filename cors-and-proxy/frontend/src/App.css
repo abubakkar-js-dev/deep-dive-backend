@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.todo-container{
+  width: 720px;
+  padding-top: 220px;
+  display: flex;
+  justify-content: space-between;
+
+}

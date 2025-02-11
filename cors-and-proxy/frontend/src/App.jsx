@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css'
+import Todolist from '../components/TodoList/Todolist';
+import singletonInstance from './utils/todos';
 
 function App() {
   const [jokes,setJokes] = useState([]);
+  const [todos,setTodos] = useState(singletonInstance.getTodos());
+  console.log(todos);
+  // cannot add because object is freez
+  // singletonInstance.something="23"
 
   useEffect(()=>{
     axios.get('/api/jokes')
@@ -29,6 +35,17 @@ function App() {
           </div>
         })
       }
+
+
+      <h2>Todos Section</h2>
+      <div className='todo-container'>
+        <div className='todos'>
+          <Todolist todos={todos} setTodos={setTodos} store={singletonInstance} />
+        </div>
+        <div className='todos'>
+          <Todolist todos={todos} setTodos={setTodos} store={singletonInstance} />
+        </div>
+      </div>
     </>
   )
 }
