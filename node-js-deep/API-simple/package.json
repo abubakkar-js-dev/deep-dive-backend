@@ -12,7 +12,6 @@
   "license": "ISC",
   "packageManager": "pnpm@10.16.1",
   "dependencies": {
-    "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "http-status-codes": "^2.3.0"
   },
