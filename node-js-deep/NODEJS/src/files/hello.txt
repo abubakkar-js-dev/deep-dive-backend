@@ -1,0 +1,128 @@
+Hello word, this is my first file using nodeJSHello World|
+
+ 
+ 
+ Wed Oct 01 2025 07:04:26 GMT+0600 (Bangladesh Standard Time)
+ Wed Oct 01 2025 07:04:28 GMT+0600 (Bangladesh Standard Time)
+ undefined
+ undefined
+ 2025-10-01T01:04:35.849Z
+ 2025-10-01T01:04:40.307Z 
+ 2025-10-01T01:04:42.826Z H
+ 2025-10-01T01:04:45.917Z is
+ 2025-10-01T01:04:48.787Z is the time of file update
+
+ 
+ 2025-10-01T01:05:22.725Z is the time of file update
+ 2025-10-01T01:05:27.684Z is the time of file update
+ 2025-10-01T01:05:50.137Z is the time of file update
+ 2025-10-01T12:25:41.816Z is the time of file update
+ 
+ 2025-10-01T12:25:51.004Z is the time of file update
+ 2025-10-01T12:25:56.780Z is the time of file update
+ 2025-10-01T12:29:01.939Z is the time of file update
+ 2025-10-01T12:29:16.032Z is the time of file update
+ 2025-10-01T12:29:21.732Z is the time of file update
+ 2025-10-01T12:29:23.620Z is the time of file update
+ 2025-10-01T12:29:25.485Z is the time of file update
+ 2025-10-01T12:29:27.023Z is the time of file update
+ 2025-10-01T12:29:30.018Z is the time of file update
+ 2025-10-01T12:29:32.135Z is the time of file update
+ 2025-10-01T12:29:34.722Z is the time of file update
+ 2025-10-01T12:29:36.442Z is the time of file update
+ 2025-10-01T12:29:48.236Z is the time of file update
+ 2025-10-01T12:29:50.479Z is the time of file update
+ 2025-10-01T12:29:53.352Z is the time of file update
+ 2025-10-01T12:29:57.844Z is the time of file update
+ 2025-10-01T12:30:20.524Z is the time of file update
+ 2025-10-01T12:30:26.106Z is the time of file update
+ 2025-10-01T12:30:31.568Z is the time of file update
+ 2025-10-01T12:30:35.222Z is the time of file update
+ 2025-10-01T12:30:40.484Z is the time of file update
+ 2025-10-01T12:30:48.306Z is the time of file update
+ 2025-10-01T12:30:57.591Z is the time of file update
+ 2025-10-01T12:31:12.088Z is the time of file update
+ 2025-10-01T12:31:22.585Z is the time of file update
+ 2025-10-01T12:31:45.998Z is the time of file update
+ 2025-10-01T12:31:48.167Z is the time of file update
+ 2025-10-01T12:31:51.727Z is the time of file update
+ 2025-10-01T12:31:53.082Z is the time of file update
+ 2025-10-01T12:32:01.377Z is the time of file update
+ 2025-10-01T12:32:03.400Z is the time of file update
+ 2025-10-01T12:32:04.915Z is the time of file update
+ 2025-10-01T12:34:17.709Z is the time of file update
+ 2025-10-01T12:34:24.658Z is the time of file update
+ 2025-10-01T12:34:24.794Z is the time of file update
+ 2025-10-01T12:34:26.170Z is the time of file update
+ 2025-10-01T12:34:27.448Z is the time of file update
+ 2025-10-01T12:34:30.422Z is the time of file update
+ 2025-10-01T12:34:34.315Z is the time of file update
+ 2025-10-01T12:34:44.187Z is the time of file update
+ 2025-10-01T12:34:52.321Z is the time of file update
+ 2025-10-01T12:35:06.979Z is the time of file update
+ 2025-10-01T12:35:10.967Z is the time of file update
+ 2025-10-01T12:35:15.022Z is the time of file update
+ 2025-10-01T12:35:32.588Z is the time of file update
+ 2025-10-01T12:35:35.527Z is the time of file update
+ 2025-10-01T12:35:46.886Z is the time of file update
+ 2025-10-01T12:35:55.575Z is the time of file update
+ 2025-10-01T12:36:13.934Z is the time of file update
+ 2025-10-01T12:36:15.879Z is the time of file update
+ 2025-10-01T12:36:18.636Z is the time of file update
+ 2025-10-01T12:36:23.258Z is the time of file update
+ 2025-10-01T12:36:25.410Z is the time of file update
+ 2025-10-01T12:37:05.189Z is the time of file update
+ 2025-10-01T12:37:11.091Z is the time of file update
+ 2025-10-01T12:37:13.379Z is the time of file update
+ 2025-10-01T12:37:16.022Z is the time of file update
+ 2025-10-01T12:37:17.410Z is the time of file update
+ 2025-10-01T12:37:20.010Z is the time of file update
+ 2025-10-01T12:37:23.019Z is the time of file update
+ 2025-10-01T12:37:36.268Z is the time of file update
+ 2025-10-01T12:37:37.942Z is the time of file update
+ 2025-10-01T12:37:39.478Z is the time of file update
+ 2025-10-01T12:37:44.438Z is the time of file update
+ 2025-10-01T12:37:53.029Z is the time of file update
+ 2025-10-01T12:38:12.279Z is the time of file update
+ 2025-10-01T12:38:23.557Z is the time of file update
+ 2025-10-01T12:38:25.656Z is the time of file update
+ 2025-10-01T12:38:31.715Z is the time of file update
+ 2025-10-01T12:38:33.843Z is the time of file update
+ 2025-10-01T12:38:37.717Z is the time of file update
+ 2025-10-01T12:38:50.370Z is the time of file update
+ 2025-10-01T12:38:51.471Z is the time of file update
+ 2025-10-01T12:38:57.839Z is the time of file update
+ 2025-10-01T12:39:00.579Z is the time of file update
+ 2025-10-01T12:39:01.794Z is the time of file update
+ 2025-10-01T12:39:20.749Z is the time of file update
+ 2025-10-01T12:39:21.787Z is the time of file update
+ 2025-10-01T12:39:40.083Z is the time of file update
+ 2025-10-01T12:39:45.120Z is the time of file update
+ 2025-10-01T12:39:47.528Z is the time of file update
+ 2025-10-01T12:39:51.853Z is the time of file update
+ 2025-10-01T12:39:53.022Z is the time of file update
+ 2025-10-01T12:40:07.283Z is the time of file update
+ 2025-10-01T12:40:08.530Z is the time of file update
+ 2025-10-01T12:40:27.165Z is the time of file update
+ 2025-10-01T12:40:29.215Z is the time of file update
+ 2025-10-01T12:40:35.314Z is the time of file update
+ 2025-10-01T12:40:42.990Z is the time of file update
+ 2025-10-01T12:40:45.201Z is the time of file update
+ 2025-10-01T12:40:58.441Z is the time of file update
+ 2025-10-01T12:41:35.020Z is the time of file update
+ 2025-10-01T12:41:37.228Z is the time of file update
+ 2025-10-01T12:41:39.024Z is the time of file update
+ 2025-10-01T12:41:40.562Z is the time of file update
+ 2025-10-01T12:41:43.973Z is the time of file update
+ 2025-10-01T12:41:45.730Z is the time of file update
+ 2025-10-01T12:41:48.094Z is the time of file update
+ 2025-10-01T12:41:49.880Z is the time of file update
+ 2025-10-01T12:41:52.987Z is the time of file update
+ 2025-10-01T12:41:54.085Z is the time of file update
+ 2025-10-01T12:41:57.730Z is the time of file update
+ 2025-10-01T12:42:03.608Z is the time of file update
+ 2025-10-01T12:42:09.430Z is the time of file update
+ 2025-10-01T12:42:18.751Z is the time of file update
+ 2025-10-01T12:42:33.810Z is the time of file update
+ 2025-10-01T12:42:47.857Z is the time of file update
+ 2025-10-01T12:43:15.358Z is the time of file update
