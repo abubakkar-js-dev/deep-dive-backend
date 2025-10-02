@@ -36,7 +36,9 @@ const server = http.createServer((req, res) => {
           let responseText;
           switch (myUrl.pathname) {
             case "/":
-              responseText = "Home Page";
+              if (req.method === "GET") {
+                responseText = "Home Page";
+              }
               break;
             case "/about":
               const userName = myUrl.query.name;
@@ -48,6 +50,16 @@ const server = http.createServer((req, res) => {
               console.log(searchTxt);
               responseText = `You searched for ${searchTxt}`;
               break;
+            case "/sign-up":
+                if(req.method === 'GET'){
+                    responseText = 'This is sign up page';
+                }else if(req.method === 'POST'){
+                    let body = '';
+                    req.on('data',chunk=>{
+                        body += chunk.toString();
+                    })
+                    res.end('Success');
+                }  
             default:
               responseText = "404 Page Not Found";
           }
