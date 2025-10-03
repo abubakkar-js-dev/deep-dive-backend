@@ -68,9 +68,10 @@ const server = http.createServer(async (req, res) => {
         sendJSON(res, 404, { success: false, message: 'User not found' });
       }
 
-    } else if (path === '/api/users' && method === 'POST') {
+    } else if (path === '/api/users' && method === 'POST') { 
       // CREATE user
       const body = await getRequestBody(req);
+      console.log(body);
       
       if (!body.name || !body.email) {
         sendJSON(res, 400, { success: false, message: 'Name and email are required' });

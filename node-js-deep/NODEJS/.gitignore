@@ -22,7 +22,7 @@ dist/
 build/
 out/
 
-# Coverage directory
+# Coverage directory 
 coverage/
 
 # Optional npm cache directory

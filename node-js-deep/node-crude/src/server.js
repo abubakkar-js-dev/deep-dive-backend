@@ -13,7 +13,7 @@ let users = [
   { id: 2, name: "Jane Smith", email: "jane@example.com" },
 ];
 
-let nextId;
+let nextId = 3;
 
 //  helper function to purse request body
 
@@ -42,14 +42,14 @@ const getRequestBody = (req) => {
     req.on("data", (chunk) => {
       body += chunk.toString();
     });
-    res.on("end", () => {
+    req.on("end", () => {
       try {
-        res.end(body ? JSON.parse(body) : {});
+        resolve(body ? JSON.parse(body) : {});
       } catch (err) {
         reject(err);
       }
-    });
-    res.on("error", (err) => reject(err));
+    }); 
+    req.on("error", (err) => reject(err));
   });
 };
 
@@ -62,10 +62,10 @@ const sendJSON = (res, statusCode, data) => {
 
 // create server
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async(req, res) => {
   const url = new URL(req.url, `https://${req.headers.host}`);
   const path = url.pathname;
-  const method = req.method;
+  const method = req.method; 
 
   // allow cors
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -89,7 +89,7 @@ const server = http.createServer((req, res) => {
     if (path === "/api/users" && method === "GET") {
       // get all users
       sendJSON(res, 200, { success: true, data: users });
-    } else if (path.match(/^\/api\/users\/(\d+)$/)) {
+    } else if (path.match(/^\/api\/users\/(\d+)$/) && method === "GET") {
       // get single user
       const id = parseInt(path.split("/")[3]);
       const user = users.find((user) => user.id === id);
@@ -99,11 +99,19 @@ const server = http.createServer((req, res) => {
       sendJSON(res, 200, { success: true, data: user });
     }else if(path === '/api/users' && method === 'POST'){
       // create user
-      const body = getRequestBody(req);
+      const body = await getRequestBody(req);
+      console.log(body);
+
+      const isEmailExist = users.some(user=> user.email === body.email );
 
       if(!body.email || !body.name){
         sendJSON(res,400,{success: false, message: 'Name and email are required'});
+        return;
+      }else if(isEmailExist){
+        sendJSON(res,409,{success: true,message: 'User is already exist.'});
+        return; 
       }
+
 
       const newUser = {
         id: nextId++,
@@ -112,6 +120,39 @@ const server = http.createServer((req, res) => {
       }
       users.push(newUser); 
       sendJSON(res,201,{success: true,data: newUser});
+    }else if(path.match(/^\/api\/users\/\d+$/) && method === 'PUT'){
+      // Update User
+      const id = parseInt(path.split('/')[3]);
+      console.log(id,"FROM ID");
+      const body = await getRequestBody(req);
+      const index = users.findIndex(user=> user.id === id);
+
+      if(index !== -1){ 
+        users[index] = {
+          ...users[index],
+          name: body.name || users[index].name,
+          email: body.email || users[index].email,
+        }
+        sendJSON(res,200,{success: true, data: users[index]});
+      }else{
+        sendJSON(res,404,{success: false,message: 'User not found'});
+      }
+    }else if(path.match(/^\/api\/users\/\d+$/) && method === 'DELETE'){
+      // Delete User
+      const id = parseInt(path.split('/')[3]);
+      const index = users.findIndex(u=> u.id === id);
+      console.log(index,'From index')
+
+      if(index !== -1){
+        const deleted = users.splice(index,1);
+        sendJSON(res, 200, { success: true, data: deleted[0]})
+
+      }else{
+        sendJSON(res, 404, { success: false, message: 'User not found' });
+      }
+    }else{
+      // route not found
+      sendJSON(res,404,{success: false, message: 'Route not found'});
     }
   } catch (err) {
     console.error("ERROR: ", err);
