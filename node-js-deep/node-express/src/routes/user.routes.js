@@ -24,10 +24,12 @@ const router = express.Router();
 // });
 
 // API: GET /api/users (List all)
-router.get("/", handleGetAllUsers);
+router
+  .route('/')
+  .get(handleGetAllUsers)
+  .post(handleCreateUser);
 
-// API: POST /api/users (Create new user)
-router.post("/", handleCreateUser);
+
 
 // API: /api/users/:id (Get, Patch, Delete)
 router

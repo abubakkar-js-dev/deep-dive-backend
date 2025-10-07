@@ -35,12 +35,17 @@ async function handleCreateUser(req,res){
   console.log(result);
   return res
     .status(201)
-    .json({ status: "success", message: "The user has been created." });
+    .json({ status: "success", message: "The user has been created.", data: result });
 }
 
 async function handleGetAllUsers(req, res) {
   // res.setHeader('X-name','Abu Bakkar Siddik');
   // console.log(req.headers);
+  try{
+
+  }catch(err){
+    return res.status(500).json({status: 'error',message: 'Failed to get all users.'});
+  }
   const users = await User.find({});
   console.log(`Accessing /api/users. Custom property: ${req.myCustomProperty}`);
   return res.status(200).json({ status: "success", data: users });
