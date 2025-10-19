@@ -19,3 +19,8 @@ connectMongoDb()
 .catch(err=>{
     console.log('Failed to connect Mongodb',err);
 })
+
+
+app.get('/',(req,res)=>{
+    res.send('Welcome to the Short URL service!');
+})

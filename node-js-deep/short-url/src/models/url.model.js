@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const urlSchema = new mongoose.Schema({
-    shorId: {
+    shortId: {
         type: String,
         required: true,
         unique: true,
