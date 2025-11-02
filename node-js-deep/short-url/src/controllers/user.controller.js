@@ -20,11 +20,14 @@ async function handleUserLogin(req,res) {
         if(!user){
             return res.render('login',{message: "Invalid Credentials"});
         }
-        const sessionId = uuidv4();
-        setUser(sessionId,user);
-        res.cookie('uid',sessionId);
+        const sessionId = uuidv4();  
+        // setUser(sessionId,user);
+
+      const token =  setUser(sessionId,user);
+        res.cookie('uid',token);
         return res.redirect('/');
     }catch(err){
+        console.log(err,"Error From login User")
         return res.status(500).json({success: false,message: "Internal Server Error"});
     }
 }
